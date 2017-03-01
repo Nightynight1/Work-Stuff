@@ -1,115 +1,46 @@
-<html>
-<head>
+<h2 style="font-size:45px; color:red;">  </h2> <!-- insert between this tag Teacher Help please with the file -----   -->
 
 
-<title>Ajax Post Web Page Particle.io Photon </title>
-
-<font style="font-size:30px">
+<h1 align=center>Full Phonegap Computer Programming Course Summary By Dana</h1>
 
 
+<a href="http://google.ca">google</a><br>
+<a href="https://docs.google.com/document/d/1MSDvZeqzHnKKOo9XC7zJ5MRh4aaN7mhLvECSkd5m-J4/edit">LinkToMyNotes</a><br>
 
-<script type="text/javascript">
-<!--
-var loadingmessage = 'Processing...';
-function setAjax(){
-   var xmlHttp;
-   try{
-      xmlHttp=new XMLHttpRequest(); // Firefox, Opera 8.0+, Safari
-      return xmlHttp;
-   }
-   catch (e){
-      try{
-         xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
-         return xmlHttp;
-      }
-      catch (e){
-         try{
-            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-            return xmlHttp;
-         }
-         catch (e){
-            alert("Your browser does not support AJAX!");
-            return false;
-         }
-     }
-   }
-}
+Github Website:<a href="https://github.com/Nightynight1/pgb-cloud9">https://github.com/Nightynight1/pgb-cloud9</a><br>
+Github Repository:<a href="https://nightynight1.github.io/pgb-cloud9/www/index.html">https://nightynight1.github.io/pgb-cloud9/www/index.html</a><br>
+Cloud9 Website:<a href="https://c9-teh-2017-cassadler.c9users.io/">https://c9-teh-2017-cassadler.c9users.io/</a><br>
+Cloud9 Workspace:<a href="https://ide.c9.io/cassadler/c9-teh-2017">https://ide.c9.io/cassadler/c9-teh-2017</a><br>
+<a href="t3a01-web-dana.html">t3a01-web-dana.html</a><br>
+<a href="t3a02-web-advanced-dana.html">t3a02-web-advanced-dana</a><br>
+<a href="t3a03-javascript-dana.html">t3a03-javascript-dana</a><br>
+<a href="t304-ifloop-dana.html">t304-ifloop-dana</a><br>
+<a href="t3a06-easy-dana.html">t3a06-easy-dana.html</a><br>
+<a href="...">...</a><br>
+<a href="...">...</a><br>
+<a href=""></a><br>
 
 
 
-function myAjax(f, url, myDivToChange) {
-   var poststr = getFormValues(f);
-    postData(url, poststr, myDivToChange);
-}
+<h3>Instructions</h3>
+Always keep this page up-to-date with <font color="red"> Not Yet Working </font> removed when ready to be marked.<br>
+Eventually (after about a month) make this into a table with four columns: #, Link, Mobile, Done. Use preset checkboxes for mobile and Done. <br>
+Also eventually erase these instructions to show that you want this page marked. <br><br><br>
 
 
 
-function postData(url, parameters, myDivToChange2){
-   var xmlHttp = setAjax();
-   xmlHttp.onreadystatechange =  function(){
-      if(xmlHttp.readyState > 0 && xmlHttp.readyState < 4){
-          document.getElementById(myDivToChange2).innerHTML=loadingmessage;
-      }
-      if (xmlHttp.readyState == 4) {
-             // this is where the magic occcurs
-             
-          var myJsonObject = JSON.parse(xmlHttp.responseText);
-             
-             
-           //document.getElementById(myDivToChange2).innerHTML=xmlHttp.responseText+' data sent was '+parameters;
-         
-           document.getElementById(myDivToChange2).innerHTML= myJsonObject.return_value;
-         
-         
-         
-      }
-   }
-   xmlHttp.open("POST", url, true);
-   xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   xmlHttp.send(parameters);
-}
+<ol>
+<li><a href="x01-web-basics/x01-web-basics.html">x01-web-basics</a><br>
+<li><a href="x01-web-basics/x01-tables-lists.html">x01-tables-lists</a><br>
+<li><a href="x01-web-basics/x01-forms.html">x01-forms</a><br>
+
+<li><a href="x02-plugin-accelerometer/x02-plugin-accelerometer.html">x02-plugin-accelerometer</a> <font color="green">Only For Mobile Devices. </font>
 
 
 
 
-function getFormValues(fobj){
-   var str = "";
-   var valueArr = null;
-   var val = "";
-   var cmd = "";
-   for(var i = 0;i < fobj.elements.length;i++){
-      switch(fobj.elements[i].type){
-         case "text":
-            str += fobj.elements[i].name +"=" + escape(fobj.elements[i].value) + "&";
-            break;         
-         case "password":
-            str += fobj.elements[i].name +"=" + escape(fobj.elements[i].value) + "&";
-            break;
-         case "textarea":
-            str += fobj.elements[i].name +"=" + escape(fobj.elements[i].value) + "&";
-            break;
-         case "select-one":
-             str += fobj.elements[i].name +"=" + fobj.elements[i].options[fobj.elements[i].selectedIndex].value + "&";
-             break;
-     }
-   }
-   str = str.substr(0,(str.length - 1));
-   return str;
-}
 
-
-
-
-function sendToSpark(myIn){
-    document.all.myParameter.value = myIn
-    document.myForm.action = 'https://api.spark.io/v1/devices/' + document.all.myDeviceId.value + '/' + document.all.myFunctionName.value
-    myAjax(document.all.myCoolForm, document.myForm.action, 'myDivId')   
-    
-}
-
-
-
-//--></script>
+<br><br>Move this marker when you get the following links working<br><br>
 
 
 
@@ -117,21 +48,56 @@ function sendToSpark(myIn){
 
 
 
-</head>
 
-<body onload="{
-   myStorage1 = localStorage.getItem('myStoredText1')
-   if(myStorage1  != null){     
-      document.getElementById('myToken').value = myStorage1 
-    }   
-    myStorage2 = localStorage.getItem('myStoredText2')
-    if(myStorage2  != null){
-       document.getElementById('myDeviceId').value = myStorage2      
-    }
-          
-}">
 
+<li><a href="x03-javascript/x03-javascript-2D-array.html">x03-javascript-2D-array.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-arrays.html">x03-javascript-arrays.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-errors.html">x03-javascript-errors.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-choose-adventure.html">x03-javascript-choose-adventure.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x03-javascript/x03-javascript-events.html">x03-javascript-events.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-flip.html">x03-javascript-flip.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-for-if-else.html">x03-javascript-for-if-else.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-functions.html">x03-javascript-functions.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x03-javascript/x03-javascript-hack-browser.html">x03-javascript-hack-browser.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-localstorage.html">x03-javascript-localstorage.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-objects.html">x03-javascript-objects.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-random.html">x03-javascript-random.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-spy.html">x03-javascript-spy.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x03-javascript/x03-javascript-strings.html">x03-javascript-strings.html </a> <font color="red"> Not Yet Working </font> 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   
+ <hr> 
+  
+  
+  
+  
+<li><a href="x04-css/x04-css.html"> x04-css.html</a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x10-plugin-basics/x10-plugin-basics.html"> x10-plugin-basics.html</a>  <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
+
+<li><a href="x20-animations-css/x20-animations-css.html">x20-animations-css.html </a> <font color="red"> Not Yet Working </font> 
+<li><a href="x20-animations-css/x20-advancedCSS.html">x20-advancedCSS.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x22-animations-SVG/x22-animations-SVG.html">x22-animations-SVG.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x25-animations-game/x25-animations-game.html"> x25-animations-game.html</a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x30-3D-images/x30-3D-images.html">x30-3D-images.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x31-3D-images-advanced/x31-3D-images-advanced.html">x31-3D-images-advanced.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x50-ajax-server-php/x50-ajax-server-php.html">x50-ajax-server-php.html </a> <font color="red"> Not Yet Working </font>
+
+<li><a href="x51-robotics-spark-core-photon/x51-robotics-spark-core-photon.html ">x51-robotics-spark-core-photon.html  </a> <font color="red"> Not Yet Working </font>
 
 
 
@@ -139,111 +105,51 @@ function sendToSpark(myIn){
 
 
 
-<h2 align=center>Simplist Ajax Web Page for the Particle.io Photon<br> (formerly the Spark.io Core) </h2>
+<hr>
 
 
 
-Device ID:<input id="myDeviceId" name="myCoreID" type=password size=50 placeholder="78dd12345678123456"> <br>
-Get this from the core area when logged in<br>
+<li><a href="x61-plugins-advanced-file/x61-plugins-advanced-file.html">x61-plugins-advanced-file.html </a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
 
-<input id="myFunctionName" name="myFunction"  type=hidden size=50 value="my-main" > 
+<li><a href="x61-plugins-advanced-file/x61-plugins-advanced-file-NoJQuery.html"> x61-plugins-advanced-file-NoJQuery.html</a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
 
-<form name="myForm" method="POST" id="myCoolForm" ><br>
+<li><a href="x62-plugins-advanced-camera/x62-plugins-advanced-camera.html">x62-plugins-advanced-camera.html</a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
 
-<input id="myParameter" name="params" type=text  style="display:none"     size=50 placeholder="d7-send-high"> 
+<li><a href="x63-plugins-advanced-accel/x63-plugins-advanced-accel.html">x63-plugins-advanced-accel.html </a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
 
-Access Token:<input id="myToken" name="access_token" type=password size=50 placeholder="5622ce6bba702ef6bd3456d5ed26aaa4a28d7c9"> <br>
-Get this from the settings area when logged into <a href="http://particle.io/build">http://particle.io/build</a><br><br>
+<li><a href="x64-plugins-advanced-sound/x64-plugins-advanced-sound.html"> x64-plugins-advanced-sound.html</a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
+
+<li><a href="x64-plugins-advanced-sound/x64-plugins-advanced-sound-poly.html">x64-plugins-advanced-sound-poly.html </a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
+
+<li><a href="x65-plugins-advanced-splashscreen/x65-plugins-advanced-splashscreen.html">x65-plugins-advanced-splashscreen.html </a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
+
+<li><a href="x66-plugins-advanced-geolocation/x66-plugins-advanced-geolocation.html">x66-plugins-advanced-geolocation.html </a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
+
+<li><a href="x67-plugins-advanced-inappbrowser/x67-plugins-advanced-inappbrowser.html"> x67-plugins-advanced-inappbrowser.html</a> <font color="green">Only For Mobile Devices. </font>  <font color="red"> Not Yet Working </font> 
 
 
-
-
-</form>
-
-
-
-<input type="button" value="Store the Photon's Token and ID locally!" onClick="{
-   localStorage.setItem('myStoredText1', document.all.myToken.value)   
-   localStorage.setItem('myStoredText2', document.all.myDeviceId.value)
-   alert( document.all.myToken.value + ' ' +document.all.myDeviceId.value + ' \nHas been stored')
-}">
+<hr>
 
 
 
 
+<li><a href="x70-phonegap-build/x70-phonegap-build.html">x70-phonegap-build.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href="x80-phonegap-client/x80-phonegap-client.html"> x80-phonegap-client.html</a> <font color="red"> Not Yet Working </font> 
+  
+<li><a href="x90-publishing/x90-publishing.html">x90-publishing.html </a> <font color="red"> Not Yet Working </font> 
+
+<li><a href=""> </a> <font color="red"> Not Yet Working </font> 
 
 
+
+
+
+
+</ol>
+
+<br>At the bottom of every page make sure you include the following button:<br>
+
+<input type=button value="Back" style="font-size:25px" onclick="{location='window.history.back'}">
 <br><br>
 
-
-
-
-
-
-
-<input type="button" value="d7-send-1" onClick="{
-    sendToSpark('d7-send-1')
-}">
-
-
-
-<input type="button" value="d7-send-0" onClick="{
-    sendToSpark('d7-send-0')
-}">
-
-
-
-
-<input type="button" value="a1-read" onClick="{
-    sendToSpark('a1-read')
-}"><br>
-
-
-
-<input type="button" value="a4-send-0" onClick="{
-    sendToSpark('a4-send-0')
-}">
-
-
-<input type="button" value="a4-send-255" onClick="{
-    sendToSpark('a4-send-255')
-}">
-    
-Note: PWM only on A4, A5 presently<br>
-
-
-
-
-
-
-
-<br><br>
-
-
-
-
-
-
-<div width="400" height="200" name="myDivName" id="myDivId"> output here </div><br>
-
-
-
-<input type=button id="myToVolts" value="Convert Sensor reading into Volts" onclick="{
-  var myTemp = parseFloat(getElementById('myDivId').innerHTML)
-  document.all.myCalc1.value = (myTemp * 3.3 / 4095).toFixed(2);
-}">
-: <input type=text id="myCalc1" value=0 size=5>Volts <br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-</font>
-</body>
-</html>
