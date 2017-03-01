@@ -1,0 +1,85 @@
+
+<h1 align=center>Javascript by Dana</h1>
+
+Put the stuff into the div<br><br>
+
+<textarea id="myArea01">enterstuff</textarea><br><br>
+
+<input type=button value="click me" onclick="{
+
+     
+
+    document.getElementById('myDiv01').innerHTML = 
+        document.getElementById('myArea01').value
+}"><br><br>
+
+<div id="myDiv01">Output Here</div>
+
+
+
+<input id='mybutton01' type=button value="on" onclick="{
+    alert(document.getElementById('mybutton01').value)
+    
+    if ( document.getElementById('mybutton01').value == 'on') {
+         document.getElementById('mybutton01').value = 'off'
+        
+        } else {
+        
+
+         document.getElementById('mybutton01').value = 'on'
+        }
+    
+        
+    }"> <br><br>
+    
+    
+    
+    <button id="myBtn">My Button</button>
+<br><br>
+
+<button onclick="disableBtn()">Disable "My Button"</button>
+<button onclick="undisableBtn()">Undisable "My Button"</button>
+
+<script>
+function disableBtn() {
+    document.getElementById("myBtn").disabled = true;
+}
+
+function undisableBtn() {
+    document.getElementById("myBtn").disabled = false;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
