@@ -1,0 +1,58 @@
+
+<head>
+<style>
+body {background-color: lightgrey;}
+h1   {color: Blue;}
+tr    {color: red;}
+</style>
+</head>
+
+<h1 align=center>if loop by dana</h1>
+
+write a loop number then your name on the end line for 100 lines<br><br>
+
+
+<textarea id="myArea01"> 4 </textarea><br><br>
+
+
+<input type=button value="click me" onclick="{
+
+  for (myNum = 1;  myNum<= 7; myNum++){
+  
+  if(myNum >= 4)  {
+        document.getElementById('myDiv01').innerHTML += 
+        '<font color=red>Loop is ' + myNum + '<br> </font>' 
+        
+  }   else {
+      document.getElementById('myDiv01').innerHTML += 'Loop is '+
+         myNum + '<br>'
+      }
+      
+      
+      
+      
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"><br><br>
+
+
+
+<div id="myDiv01"></div>
